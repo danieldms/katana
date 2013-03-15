@@ -1,0 +1,57 @@
+<div class="account-container register">	
+	<div class="content clearfix">
+		
+		<%= form_for @user do |f| %>
+		
+			<h1>Create Your Account</h1>			
+			
+			<div class="login-fields">
+				
+				<p>Create your free account:</p>
+				
+				<div class="field">
+					<label for="firstname">Name:</label>
+					<%= f.text_field :name, :class => 'login', :placeholder => 'Name' %>
+				</div> <!-- /field -->		
+				
+				<div class="field">
+					<label for="email">Email Address:</label>
+					<%= f.text_field :email, :class => 'login', :placeholder => 'Email' %>
+				</div> <!-- /field -->
+				
+				<div class="field">
+					<label for="password">Password:</label>
+					<%= f.password_field :password, :class => 'login', :placeholder => 'Password' %>
+				</div> <!-- /field -->
+				
+				<div class="field">
+					<label for="confirm_password">Confirm Password:</label>
+					<%= f.password_field :password_confirmation, :class => 'login', :placeholder => 'Confirm Password' %>
+				</div> <!-- /field -->
+				
+			</div> <!-- /login-fields -->
+			
+			<div class="login-actions">
+				
+				<span class="login-checkbox">
+					<input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
+					<label class="choice" for="Field">I have read and agree with the Terms of Use.</label>
+				</span>
+									
+				<%= f.submit 'Register', :class => 'button btn btn-primary btn-large' %>
+				
+			</div> <!-- .actions -->
+			
+		<% end %>
+		
+	</div> <!-- /content -->
+</div> <!-- /account-container -->
+
+
+<!-- Text Under Box -->
+<div class="login-extra">
+	Already have an account? <a href="./login.html">Login</a>
+</div> <!-- /login-extra -->
+
+</body>
+</html>

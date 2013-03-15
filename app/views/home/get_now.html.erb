@@ -1,0 +1,110 @@
+	<div class="container">
+	<div class="row">
+
+		<div class="span12">
+			<section class="crumb">
+				<h2>
+					Services.&nbsp<small>Check our services.</small>
+				</h2>		
+				<div id="page-title" class="clearfix">
+					<ul class="breadcrumb">
+						<li><%= link_to 'home' , index_home_path() %><span class="divider">/</span></li> 
+						<li><%= link_to 'Get It Now' , get_now_path(), :class => "active" %></li>
+					</ul>
+				</div>
+			</section>		
+		</div>
+
+		<div class="span6 fl">
+			<div id="validation" class="widget highlight widget-form">
+  			
+      			<div class="widget-header">	      				
+      				<h3>
+      					<i class="icon-pencil"></i>
+      					Fill the Form	      					
+  					</h3>	
+  				</div> <!-- /widget-header -->
+				
+				<div class="widget-content">
+					<% if !@getnow.errors.empty? %>
+						<div class="alert alert-block">
+						  	<a class="close" data-dismiss="alert" href="#">×</a>
+						  	<h4 class="alert-heading">Error Message</h4>
+						 	<%= @getnow.errors.full_messages %>
+						</div>
+					<% end %>
+
+					<%= form_for @getnow, :html =>{:class=> 'form-horizontal', :id => 'get-now'}, :url => { :action =>  "get_now"}, 
+					:multipart => true do |g| %>
+						<fieldset>
+						    <div class="control-group">
+						      <label class="control-label" for="name">Your Name</label>
+						      <div class="controls">
+						        <%= g.text_field :name , :class => 'input-large' %> 
+						      </div>
+						    </div>
+						    <div class="control-group">
+						      <label class="control-label" for="email">Email Address</label>
+						      <div class="controls">
+						        <%= g.text_field :email , :class => 'input-large' %> 
+						      </div>
+						    </div>
+						    <div class="control-group">
+						      <label class="control-label" for="subject">Subject</label>
+						      <div class="controls">
+						         <%= g.text_field :subject , :class => 'input-large' %> 
+						      </div>
+						    </div>
+						    <div class="control-group">
+						      <label class="control-label" for="subject">Type</label>
+						      <div class="controls">
+						        <select id="type">
+								  <option value="web">Web Development</option>
+								  <option value="mobile">Mobile Development</option>
+								  <option value="webservice">Web Services</option>
+								  <option value="logo">Logo Design</option>								  
+								  <option value="webdesign">Web Design</option>
+								  <option value="graphic">Graphic Design</option>
+								  <option value="other">Other Services</option>
+								</select>
+						      </div>
+						    </div>
+
+						    <div class="control-group">
+					            <label class="control-label" for="budget">Budget</label>
+					            <div class="controls">
+					              <div class="input-prepend input-append">
+					                <span class="add-on">$</span> 
+					               		<%= g.text_field :budget, :class => 'span2', :size =>'16px'%>
+					                <span class="add-on">.00</span>
+					              </div>
+					            </div>
+				         	</div>
+
+						    <div class="control-group">
+						      <label class="control-label" for="message">Description Service</label>
+						      <div class="controls">
+						        <%= g.text_area :message, :rows => '12', :cols => '30' %>
+						      </div>
+						    </div>
+						    <div class="control-group">
+					            <label class="control-label" for="fileInput">Url</label>
+					            <div class="controls">
+					              <%= g.text_field :file%>
+					            </div>
+				          	</div>
+						    <div class="form-actions">
+						      <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+						      <button type="reset" class="btn btn-large">Cancel</button>
+						    </div>
+					  	</fieldset>
+					<% end %>	
+					
+					
+
+				</div> <!-- /.widget-content -->						
+			</div> <!-- /#validation-->
+		</div>
+
+	</div>
+</div>

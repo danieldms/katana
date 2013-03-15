@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Katana Developers - Design, Websites and Mobile Applications </title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h1><%= link_to 'Katana Developers', root_path() %></h1>
+					<nav class="fr">
+						<%= link_to "Home", index_home_path() %>
+						<%= link_to "About", about_home_path() %>
+						<%= link_to "Portfolio", portfolio_home_path() %>
+						<%= link_to "Services", services_home_path() %>
+						<%= link_to "Contact", contact_home_path() %>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header> <!-- /header -->
+
+	<%= yield %>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="span4">
+					<div class="widget">
+						<div class="widget-content">
+							<div class="page-header">
+							  <h1><small>About</small></h1>
+							</div>
+							<p>
+								Create unique design and perfect for your needs, with the primary objective to show the company's identity creating something beyond expectations.
+							</p>
+						</div>
+					</div>
+				</div><!-- /.span4	-->
+
+				<div class="span4">
+					<div class="widget">
+						<div class="widget-content">
+							<div class="page-header">
+							  <h1><small>Contact Information</small></h1>
+							</div>
+							
+							<ul class="info">
+								<li class="address"><i class="icon-map-marker icon-white"></i> Address:<a href="">St. Milton S Cruz - Brazil</a></li>
+								<li class="email"><i class="icon-envelope icon-white"></i> Email: <a href="mailto:#">katana.dev@gmail.com</a></li>
+								<li class="phone"><i class="icon-edit icon-white"></i> Phone: <a href="">+55 83 32383225</a></li>
+								<li class="skype"><i class="icon-user icon-white"></i> Skype: <a href="">katana.dev</a></li>
+							</ul>
+						</div>
+					</div>
+				</div><!-- /.span4	-->
+
+				<div class="span4">
+					<div class="widget">
+						<div class="widget-content">
+							<div class="page-header">
+							  <h1><small>Stay Connected</small></h1>
+							</div>
+							<nav class="social">
+								<a  href="#" class="facebook"></a>
+								<a  href="#" class="twitter"></a>
+								<a  href="#" class="skype"></a>
+								<a  href="#" class="plus"></a>
+							</nav>
+						</div>
+					</div>
+				</div> <!-- /.span4	-->
+
+			</div>	<!-- /.row -->
+		</div><!-- /.container -->
+
+		<section id="copyright"> 
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						<h4><small>© Copyright 2013 by Katana Developers. All Rights Reserved.</small></h4></div>
+					</div>
+				</div>
+			</div>
+		</section><!-- /#copyright	-->
+
+	</footer><!-- /footer -->
+
+
+
+</body>
+</html>

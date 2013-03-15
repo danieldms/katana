@@ -1,0 +1,116 @@
+<div class="container">
+	<div class="row">
+
+		<div class="span12">
+			<section class="crumb">
+				<h2>
+					Contact.&nbsp<small>Don't hesitate to keep in touch.</small>
+				</h2>	
+				<div id="page-title" class="clearfix">
+					<ul class="breadcrumb">
+						<li><%= link_to 'home' , index_home_path() %><span class="divider">/</span></li> 
+						<li><%= link_to 'contact' , contact_home_path(), :class => "current" %></li>
+					</ul>
+				</div>	
+			</section>	<!-- /.crumb -->	
+		</div>
+
+		<% if flash[:notice] %>
+			<div class="alert alert-success">
+				<%= flash[:notice] %>
+				<button type="button" class="close">X</button>
+			</div>
+		<% end %>
+
+		<div class="span7">
+			<div class="widget">
+				<div class="widget-content">
+					<h4>On the Map</h4>
+					<div class="map">
+						<script type="text/javascript"
+					      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiF74nxMIb83C_aS1AZGszE0NSVZlsqDU&sensor=false">
+					    </script>
+					    <script type="text/javascript">
+					      function initialize() {
+
+					        var mapOptions = {
+					          center: new google.maps.LatLng(-7.170715283970671, -34.8414565105005996),
+					          zoom: 18,
+					          mapTypeId: google.maps.MapTypeId.ROADMAP
+					        };
+					        var map = new google.maps.Map(document.getElementById("map_canvas"),
+					            mapOptions);
+					        
+					      }
+					       $(function(){
+					       		initialize();
+					       });
+					    </script>
+					    <div id="map_canvas" style="width:100%; height:100%"> </div>
+					</div>
+					<div class="contact-address">
+						<h4>Contact Information</h4>
+						<ul>
+							<li class="address"><i class="icon-map-marker"></i> Address:<a href="">St. Milton S Cruz - Mangabeira
+João Pessoa - PB, Brazil, 58056-070</a></li>
+							<li class="email"><i class="icon-envelope"></i> Email: <a href="mailto:#">katana.dev@gmail.com</a></li>
+							<li class="phone"><i class="icon-edit"></i> Phone: <a href="">+55 83 32383225</a></li>
+							<li class="skype"><i class="icon-user"></i> Skype: <a href="">katana.dev</a></li>
+						</ul>
+					</div>
+ 
+				</div>
+			</div>
+		</div> <!-- /.span7 -->
+
+
+		<div class="col-message fr">
+			<div id="validation" class="widget highlight widget-form">
+  			
+      			<div class="widget-header">	      				
+      				<h3>
+      					<i class="icon-pencil"></i>
+      					Fill the Form	      					
+  					</h3>	
+  				</div> <!-- /widget-header -->
+				
+				<div class="widget-content">
+					
+					<%= form_for @contact, :html =>{:class=> 'form-horizontal'}, :url => { :action =>  "contact"} do |f| %>
+						<fieldset>
+						    <div class="control-group">
+						      <label class="control-label" for="name">Your Name</label>
+						      <div class="controls">
+						        <input type="text" class="input-large" name="name" id="name">
+						      </div>
+						    </div>
+						    <div class="control-group">
+						      <label class="control-label" for="email">Email Address</label>
+						      <div class="controls">
+						        <input type="text" class="input-large" name="email" id="email">
+						      </div>
+						    </div>
+						    <div class="control-group">
+						      <label class="control-label" for="subject">Subject</label>
+						      <div class="controls">
+						        <input type="text" class="input-large" name="subject" id="subject">
+						      </div>
+						    </div>
+						    <div class="control-group">
+						      <label class="control-label" for="message">Your Message</label>
+						      <div class="controls">
+						        <textarea class="input-large" name="message" id="message" rows="10"></textarea>
+						      </div>
+						    </div>
+						    <div class="form-actions">
+						      <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+						      <button type="reset" class="btn btn-large">Cancel</button>
+						    </div>
+					  	</fieldset>
+					<% end %>
+					
+				</div> <!-- /.widget-content -->						
+			</div> <!-- /#validation-->
+		</div><!-- /.col-message -->
+	</div>
+</div>

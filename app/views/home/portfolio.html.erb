@@ -1,0 +1,56 @@
+<div class="container">
+	<div class="row">
+
+		<div class="span12">
+			<section class="crumb">
+				<h2>
+					Portfolio.&nbsp<small>View my recent works.</small>
+				</h2>	
+				<div id="page-title" class="clearfix">
+					<ul class="breadcrumb">
+						<li><%= link_to 'home' , index_home_path() %><span class="divider">/</span></li>
+						<li><%= link_to 'portfolio' , portfolio_home_path(), :class => "current" %></li>
+					</ul>
+				</div>	
+			</section>		
+		</div> <!-- /. crumb -->
+
+		<div class="span12">
+			<div class="widget">
+				<div class="widget-content">
+					<% if !@portfolios.empty? %>
+						<div>
+							<ul class="portfolio-categ filter">
+								<li class="all active"><a href="">all</a></li>
+								<!-- <li class="category-item-1"><a href="">category 1</a></li> -->
+							</ul>
+							<!--<div class="portfolio-find fr">
+								<form>
+								<input class="fl"  type="text" width="10px" placeholder="find project">
+									<input class="fr" type="submit" value="Submit">
+								<form>
+							</div>-->
+						</div>
+						<div>
+							<ul class="portfolio-area">
+								<% @portfolios.each  do |p| %>
+									<li class="recent-works">
+										<img src="<%= image_path (p.image) %>" width="225px" height="225px" />
+										<div class="info"><a href="#"><%= p.site %></a></div>
+									</li>
+								<% end %>
+							</ul>
+						</div>
+						<div class="clear"></div>
+					<% else %>
+						<div class="alert alert-success">
+							Sorry! We currently have not updated our portfolio.
+							<button type="button" class="close">X</button>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+
+	</div> <!-- /.row -->
+</div> <!-- /.container -->

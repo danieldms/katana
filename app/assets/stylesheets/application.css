@@ -1,0 +1,392 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap
+ *= require bootstrap-responsive
+ *= require bootstrap-overrides
+ *= require slate
+ *= require slate-responsive
+ *= require_self.
+ */
+
+h1{font-size: 24px;}
+
+body{
+	background: #f7f7ef;
+	font: 12px/1.7em 'Open Sans', arial, sans-serif;
+	font-weight: 300;
+}
+
+.fr{ float:right; }
+.fl{ float:left; }
+
+a, a:hover{
+	text-decoration: none;
+}
+#page-title{
+	border: none;
+	background: none;
+	padding: 5px 0;
+	border-top: 1px solid #999999;
+	border-radius: 0px;
+}
+
+.breadcrumb{
+	box-shadow: none;
+}
+
+ /*=================================
+ 	[1. Header]
+*/
+
+header{
+	background: #373737;
+	padding: 30px 0 10px 0;
+	border-bottom: 1px solid #000;
+}
+
+header h1{
+
+	float:left;
+	background: url('logo.png') no-repeat 0 0;
+}
+
+header h1 a{
+	display: block;
+	height: 61px;
+	width: 254px;
+	text-indent: -9999px;
+}
+
+nav{
+	font-size: 16px;
+	margin: 7px 0 0 0;
+}
+
+nav a{
+	padding: 12px 20px 12px 20px;
+	color: #c5c5c5;
+}
+
+nav a:hover{
+	color:#fff;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1) inset;
+	background: none repeat scroll 0 0 rgba(35, 35, 35, 0.5);
+	border-radius: 6px 6px 6px 6px;
+}
+
+/*=================================
+ 	[2. crumbs / featured / welcome-message #index]
+*/
+.crumbs{
+	padding: 50px 0 25px 0;
+}
+
+#featured{
+	height: 460px;
+	border-bottom: 1px solid #e1e1e1;
+	padding: 0 0 50px 0;
+	margin: 0 0 50px 0;
+}
+
+#featured .featured-content{
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	border: 5px solid #fff;
+	box-shadow: 0px 0px 10px #888888;
+}
+.featured-content .animate-1{
+	background: url(featured.jpeg) no-repeat 0 0;
+	width: 100%;
+	height: 100%;
+}
+
+.featured-content .featured-text{
+	padding: 40px;
+	width: 420px;
+}
+
+.featured-content .featured-text .featured-title{
+	color: #ffffff;
+	background: #000000;
+	padding: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.featured-content .featured-text .featured-subtitle{
+	color: #eb5f00;
+	background: #ffffff;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: initial;
+}
+
+.featured-content .featured-text .featured-description{
+	font-size: 14px;
+	color: #ffffff;
+	margin-bottom: 40px;
+}
+
+.featured-content .featured-text .featured-contact a{
+	padding: 10px 20px;
+	background: #eb5f00;
+	color: #fff;
+	border-radius: 4px;
+	width: auto;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+#welcome-message{
+	line-height: 18px;
+	padding: 20px;
+	background: #f1f1f1;
+	margin: 0 0 50px;
+	text-align: center;
+}
+
+#welcome-message h3{
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0px 0 20px 0;
+	color: #373737;
+}
+
+#welcome-message p{
+	margin: 0;
+}
+
+/*=================================
+ 	[3. intro#index]
+*/
+.intro{
+	margin: 0 0 50px 0; 
+	padding: 0 0 24px 0;
+	border-bottom: 1px solid #e1e1e1;
+	float: left;
+}
+/* Overrides */
+.intro .span4:first-child{
+	margin: 0;
+}
+
+.intro h5{ 
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+.intro h5 img{
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.intro h5 a{
+	margin-bottom: 10px;
+}
+
+.intro address{
+	font-size: 11px;
+	float: left;
+	display: block;
+	width: 260px;
+}
+
+
+
+/*=================================
+ 	[4. latest work]
+*/
+
+#list-work{
+	padding-bottom: 5px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #e1e1e1;
+	float: left;
+}
+
+#list-work .span12{
+	margin:0 0 25px 0;
+}
+
+#list-work .span12 h3{
+	font-weight: initial;
+}
+
+#list-work .list-work-content .span3:first-child{
+	margin: 0;
+}
+
+#list-work .list-work-content .widget-content{
+	background: none;
+	border: none;
+}
+
+#list-work .widget-content p{
+	margin-top: 20px;
+	text-align: center;
+}
+
+#list-work .widget-content p .content-title{
+	float: left;
+	width: 100%;
+	font-size: 16px;
+}
+
+/*=================================
+ 	[5. about#about]
+*/
+.about-info p{
+	margin-bottom: 0;
+}
+
+.about-info p:last-child{
+	margin-bottom: 20px;
+}
+
+.crumb{
+	margin-top:25px;
+}
+
+/*=================================
+ 	[6. page#contact]
+*/
+
+.map{
+	width: 638px;
+	height: 400px;
+	margin-top: 20px;
+}
+
+.contact-address h4{
+	margin: 40px 0 20px 0;
+}
+.contact-address li{
+	list-style: none;
+	line-height: 18px;
+	margin-top: 5px;
+}
+.contact-address li a{
+	margin-left: 10px;
+}
+
+/*=================================
+ 	[7. page#portfolio]
+*/
+
+/*=================================
+ 	[8. page#services]
+*/
+
+.services .widget{
+	min-height: 120px;
+}
+
+.services p {
+	margin-bottom: 0;
+}
+
+/*=================================
+ 	[9. page#get-it-now]
+*/
+
+#get-now .input-large{
+	width: 300px;
+}
+#contact_budget{
+	margin-left: -3px;
+	margin-right: -3px;
+}
+/*=================================
+ 	[10. footer]
+*/
+
+footer{
+	background: #373737;
+	line-height: 18px;
+	font-size: 14px;
+	border-top: 5px solid #CFCFCF;
+	color:#8a8a8a;
+}
+
+/* Overrides */
+footer .page-header {
+	border-bottom: 1px solid #8e8e8e;
+}
+
+footer .widget,
+footer .p{
+	margin-bottom: 0;
+}
+
+footer .widget-content{
+	background: none;
+	border: none;
+}
+
+footer p{
+	color:#8a8a8a;
+}
+
+footer .info {
+	color: #8a8a8a;
+	margin:0;
+}
+
+footer li { 
+	list-style: none;
+}
+
+footer .info li a{ 
+	color: #fff;
+	margin-left: 5px;
+}	
+
+footer .social {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+footer .social a{
+	display: inline-block;
+	margin-right: 10px;
+	padding: 0;
+	height: 48px;
+	width: 48px;
+	text-indent: -99999px;
+}
+
+footer .social .facebook {
+	background: url('social/facebook.png') no-repeat 0 0 ;
+}
+
+footer .social .twitter{
+	background: url('social/twitter.png') no-repeat 0 0 ;
+}
+
+footer .social .skype{
+	background: url('social/skype.png') no-repeat 0 0 ;	
+}
+
+footer .social .plus{
+	background: url('social/plus.png') no-repeat 0 0 ;
+}
+
+#copyright{
+	text-align: center;
+	padding: 10px 0;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1) inset;
+	background: none repeat scroll 0 0 rgba(35, 35, 35, 0.4);
+}
+

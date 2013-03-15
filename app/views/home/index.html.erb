@@ -1,0 +1,145 @@
+<section class="container">	
+	<div class="row">
+
+		<div class="span12">
+			<div class="crumbs"></div>
+		</div> <!-- /.span .crumbs -->
+
+
+		<div class="span12">
+			<section id="featured">
+				<div class="featured-content">
+					<div class="animate-1">
+						<div class="featured-text fl">
+							<div class="featured-title"><h2>Create Your Application</h2></div>
+							<div class="featured-subtitle"><h2>Desktop, Web and Mobile.</h2></div>
+							<div class="featured-description">We create and customize your application or transform their ideas into reality. Please contact us!</div>
+							<div class="featured-contact"><%= link_to 'contact us!', get_now_path() %></div>
+						</div> 
+						<div class="featured-images fr">
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!-- /.span .featured	-->
+
+		<div class="span12">
+			<section id="welcome-message" class="widget">
+				<h3>HELLO! CREATE A SOLUTION FOR YOUR BUSINESS. <%= link_to 'GET IT NOW!', get_now_path() %> </h3>
+				<p>
+					Here you`ll find the information needed to find what it seeks.	
+				</p>		
+			</section>
+		</div><!-- /.span .welcome-message	-->
+		
+		<div class="span12">
+			<section class="intro">
+				<div class="span4">
+					<div class="widget">
+						<div class="widget-content">
+							<h5><img src="<%= image_path('admin.png') %>"><a href="">  Design</a></h5>
+							<address>Create unique design and perfect for your needs, with the primary objective to show the company's identity creating something beyond expectations.
+	                        </address>
+						</div>
+					</div>
+				</div><!-- /.span4	-->
+				<div class="span4">
+					<div class="widget">
+						<div class="widget-content">
+							<h5><img src="<%= image_path('admin.png') %>"><a href=""> Websites</a></h5>
+							<address>Provide expertise in the planning and development of your website or work to make improvements on an existing website.
+	                        </address>
+						</div>
+					</div>
+				</div><!-- /.span4	-->
+				<div class="span4">
+					<div class="widget">
+						<div class="widget-content">
+							<h5><img src="<%= image_path('admin.png') %>"><a href="">  Mobile Applications</a></h5>
+							<address>Be create an application from scratch or update an existing one. Skill and experience make the katana is the perfect choice for your choice.	
+	                        </address>
+						</div>
+					</div>
+				</div><!-- /.span4	-->
+			</section><!-- /section .intro	-->
+		</div>
+
+		<% if !@portfolios.empty? %>
+		<div class="span12">
+			<section id="list-work">
+				<div class="span12">
+					<h3>Rencent From Portfolio</h3>
+				</div>
+				<section class="list-work-content">
+
+					<div class="span3">
+						<div class="widget">
+							<div class="widget-content">
+								<a href=""></a>
+								<h3>
+									<a href="#"><img src="<%= image_path('portfolio/teste.jpeg') %>"></a>
+								</h3>
+								<p>
+									<span class="content-title">Dubai Pool	<br>	
+										<small>Illustration, Web Design</small>
+									</span>
+								</p>								
+							</div>
+						</div>
+					</div><!-- /.span .widget	-->
+
+					<div class="span3">
+						<div class="widget">
+							<div class="widget-content">
+								<h3>
+									<a href="#"><img src="<%= image_path('portfolio/teste.jpeg') %>"></a>
+								</h3>
+								<p>
+									<span class="content-title">Dubai Pool	<br>	
+										<small>Illustration, Web Design</small>
+									</span>
+								</p>								
+							</div>
+						</div>
+					</div><!-- /.span .widget	-->
+
+					<div class="span3">
+						<div class="widget">
+							<div class="widget-content">
+								<h3>
+									<a href="#"><img src="<%= image_path('portfolio/teste.jpeg') %>"></a>
+								</h3>
+								<p>
+									<span class="content-title">Dubai Pool	<br>	
+										<small>Illustration, Web Design</small>
+									</span>
+								</p>								
+							</div>
+						</div>
+					</div><!-- /.span .widget	-->
+
+					<div class="span3">
+						<div class="widget">
+							<div class="widget-content">
+								<h3>
+									<a href="#"><img src="<%= image_path('portfolio/teste.jpeg') %>"></a>
+								</h3>
+								<p>
+									<span class="content-title">Dubai Pool	<br>	
+										<small>Illustration, Web Design</small>
+									</span>
+								</p>								
+							</div>
+						</div>
+					</div><!-- /.span .widget	-->
+
+				</section><!-- /.span .list-work-content	-->
+
+			</section><!-- /.span .list-work	-->
+
+		</div><!-- /.span12	-->
+		<% end%>
+
+	</div><!-- /.row -->
+</section>

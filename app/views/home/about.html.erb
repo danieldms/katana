@@ -1,0 +1,51 @@
+<section class="container">	
+	<div class="row">
+
+		<div class="span12">
+			<section class="crumb">
+				<h2>
+					About US.&nbsp<small>View More About Our Team.</small>
+				</h2>	
+				<div id="page-title" class="clearfix">
+					<ul class="breadcrumb">
+						<li><%= link_to 'home' , index_home_path() %><span class="divider">/</span></li> 
+						<li><%= link_to 'about' , about_home_path(), :class => "active" %></li>
+					</ul>
+				</div>	
+			</section>		
+		</div>
+
+		<div class="span12">
+			<div class="widget">
+				<div class="widget-content">
+					<section class="about-info">
+						<h2>What We Do </h2>
+						<p>We are an experienced company located in Brazil. Providing customized services, efficient and high quality for your ideas compelling. <br>
+
+						We have enough experience and skills, because we have a team that consists of experts with extensive experience in programming and systems design to create hardworking top.<br>
+
+						Our programmers were universities and has enough experience in software development. Recently joined our staff design professionals to create fantastic and beautiful solutions to our customers.<br>
+
+						Our team will work closely with you to provide a sleek and fit into their strategy. We pride ourselves on our ability to work fast and efficiently, and always within budget, thus adding value to your business. </p>			
+					</section>
+
+					<% if !@team.empty? %>
+					<section class="our-team">
+						<h2>Check our Team </h2>
+						<ul class="team-content">
+							<% @team.each do |t| %>
+							<li class="team-info" id="team-info">
+								<img src="<%= image_path ('img-portfolio01.jpg') %>" width="225px" height="225px" />
+								<div class="info"><a href="#"><%= t.name	%></a></div>
+							</li>
+							<% end %>
+						</ul>						
+					</section>
+					<% end %>
+				</div>	
+			</div>	
+		</div>
+
+		
+	</div><!-- /.row	-->
+</section><!-- /.container	-->
